@@ -1,0 +1,63 @@
+{
+  "name": "oclif-graphql-auth0",
+  "description": "Boilerplate for talking to GraphQL servers from the command line.",
+  "version": "0.0.0",
+  "author": "Dane Burkland",
+  "bin": {
+    "talk": "./bin/run"
+  },
+  "bugs": "https://github.com/daneburkland/oclif-graphql-auth0/issues",
+  "dependencies": {
+    "@oclif/command": "^1.6.1",
+    "@oclif/config": "^1.15.1",
+    "@oclif/plugin-help": "^3.0.1",
+    "@types/fs-extra": "^9.0.0",
+    "auth0": "^2.25.1",
+    "cli-ux": "^5.4.6",
+    "fs-extra": "^9.0.0",
+    "graphql-request": "^1.8.2",
+    "path": "^0.12.7",
+    "tslib": "^1.13.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "@types/node": "^10.17.21",
+    "eslint": "^5.16.0",
+    "eslint-config-oclif": "^3.1.0",
+    "eslint-config-oclif-typescript": "^0.1.0",
+    "globby": "^10.0.2",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/daneburkland/oclif-graphql-auth0",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "talk",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "daneburkland/oclif-graphql-auth0",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint . --ext .ts --config .eslintrc",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}
