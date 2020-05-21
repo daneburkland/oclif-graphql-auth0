@@ -1,6 +1,6 @@
 # oclif-graphql-auth0
 
-Boilerplate for talking to GraphQL servers from the command line.
+Boilerplate for creating CLI apps that talk to GraphQL servers.
 
 <!-- toc -->
 
